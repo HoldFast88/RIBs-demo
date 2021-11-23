@@ -1,0 +1,52 @@
+[
+    {
+        "id": "1",
+        "name": "Mike Morales",
+        "moviesIds": ["fc", "ahx", "sw2"]
+    },
+    {
+        "id": "2",
+        "name": "John Dou",
+        "moviesIds": ["fc"]
+    },
+    {
+        "id": "3",
+        "name": "Alexis Nullov",
+        "moviesIds": ["fc", "fmj"]
+    },
+    {
+        "id": "4",
+        "name": "Alexander Nullchenko",
+        "moviesIds": ["fc", "bttf"]
+    },
+    {
+        "id": "5",
+        "name": "Nicole Boom",
+        "moviesIds": ["fc", "fmj", "sw1"]
+    },
+    {
+        "id": "6",
+        "name": "Michael Schur",
+        "moviesIds": ["aco"]
+    },
+    {
+        "id": "7",
+        "name": "Jack Hou",
+        "moviesIds": ["aco"]
+    },
+    {
+        "id": "8",
+        "name": "Ole Ole",
+        "moviesIds": ["aco"]
+    },
+    {
+        "id": "9",
+        "name": "Guy Some",
+        "moviesIds": ["aco"]
+    },
+    {
+        "id": "10",
+        "name": "Ji Hu",
+        "moviesIds": ["aco"]
+    }
+]

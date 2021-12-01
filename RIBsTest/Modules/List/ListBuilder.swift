@@ -12,15 +12,9 @@ struct ListItem {
     let title: String
 }
 
-protocol ListDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
-}
+protocol ListDependency: Dependency {}
 
-final class ListComponent: Component<ListDependency> {
-
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
-}
+final class ListComponent: Component<ListDependency> {}
 
 // MARK: - Builder
 

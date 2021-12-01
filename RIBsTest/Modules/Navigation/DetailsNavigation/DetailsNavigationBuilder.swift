@@ -12,14 +12,9 @@ public enum DetailsNavigationPayload {
     case actor(Actor)
 }
 
-protocol DetailsNavigationDependency: MovieDetailsDependency, ActorDetailsDependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
-}
+protocol DetailsNavigationDependency: MovieDetailsDependency, ActorDetailsDependency {}
 
-final class DetailsNavigationComponent: Component<DetailsNavigationDependency> {
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
-}
+final class DetailsNavigationComponent: Component<DetailsNavigationDependency> {}
 
 // MARK: - Builder
 

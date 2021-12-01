@@ -11,10 +11,7 @@ protocol ActorDetailsDependency: Dependency {
     var dataManager: DataManager { get }
 }
 
-final class ActorDetailsComponent: Component<ActorDetailsDependency> {
-
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
-}
+final class ActorDetailsComponent: Component<ActorDetailsDependency> {}
 
 // MARK: - Builder
 

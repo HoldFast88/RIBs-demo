@@ -11,9 +11,7 @@ protocol MovieDetailsDependency: Dependency {
     var dataManager: DataManager { get }
 }
 
-final class MovieDetailsComponent: Component<MovieDetailsDependency> {
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
-}
+final class MovieDetailsComponent: Component<MovieDetailsDependency> {}
 
 // MARK: - Builder
 

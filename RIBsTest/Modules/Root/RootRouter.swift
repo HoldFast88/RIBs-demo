@@ -11,9 +11,7 @@ protocol RootInteractable: Interactable, MoviesListener, ActorsListener {
     var router: RootRouting? { get set }
 }
 
-protocol RootViewControllable: ActorsViewControllable, MoviesViewControllable {
-    
-}
+protocol RootViewControllable: ActorsViewControllable, MoviesViewControllable {}
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
     private let moviesBuildable: MoviesBuildable

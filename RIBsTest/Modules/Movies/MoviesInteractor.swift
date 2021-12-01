@@ -13,9 +13,7 @@ protocol MoviesRouting: Routing {
     func routeToDetails(for movie: Movie)
 }
 
-protocol MoviesListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
-}
+protocol MoviesListener: AnyObject {}
 
 final class MoviesInteractor: Interactor, MoviesInteractable {
     weak var router: MoviesRouting?

@@ -13,9 +13,7 @@ protocol ActorsRouting: Routing {
     func routeToDetails(for actor: Actor)
 }
 
-protocol ActorsListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
-}
+protocol ActorsListener: AnyObject {}
 
 final class ActorsInteractor: Interactor, ActorsInteractable {
     weak var router: ActorsRouting?

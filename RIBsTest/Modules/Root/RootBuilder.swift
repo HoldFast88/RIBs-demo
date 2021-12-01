@@ -7,18 +7,9 @@
 
 import RIBs
 
-protocol RootDependency: MoviesDependency, ActorsDependency {
-    var dataManager: DataManager { get }
-}
+protocol RootDependency: MoviesDependency, ActorsDependency {}
 
-final class RootComponent: Component<RootDependency> {
-    private let rootViewController: RootViewController
-    
-    init(dependency: RootDependency, rootViewController: RootViewController) {
-        self.rootViewController = rootViewController
-        super.init(dependency: dependency)
-    }
-}
+final class RootComponent: Component<RootDependency> {}
 
 // MARK: - Builder
 

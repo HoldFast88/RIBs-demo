@@ -17,12 +17,9 @@ protocol DetailsNavigationRouting: ViewableRouting {
 
 protocol DetailsNavigationPresentable: Presentable {
     var listener: DetailsNavigationPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol DetailsNavigationListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
-}
+protocol DetailsNavigationListener: AnyObject {}
 
 final class DetailsNavigationInteractor: PresentableInteractor<DetailsNavigationPresentable>, DetailsNavigationInteractable, DetailsNavigationPresentableListener {
     weak var router: DetailsNavigationRouting?

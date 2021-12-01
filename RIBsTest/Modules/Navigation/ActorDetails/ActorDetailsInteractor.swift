@@ -8,9 +8,7 @@
 import RIBs
 import RxSwift
 
-protocol ActorDetailsRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-}
+protocol ActorDetailsRouting: ViewableRouting {}
 
 protocol ActorDetailsPresentable: Presentable {
     var listener: ActorDetailsPresentableListener? { get set }

@@ -12,13 +12,9 @@ protocol ActorDetailsInteractable: Interactable {
     var listener: ActorDetailsListener? { get set }
 }
 
-protocol ActorDetailsViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
-}
+protocol ActorDetailsViewControllable: ViewControllable {}
 
 final class ActorDetailsRouter: ViewableRouter<ActorDetailsInteractable, ActorDetailsViewControllable>, ActorDetailsRouting {
-
-    // TODO: Constructor inject child builder protocols to allow building children.
     override init(interactor: ActorDetailsInteractable, viewController: ActorDetailsViewControllable) {
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self

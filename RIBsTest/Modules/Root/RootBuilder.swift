@@ -7,27 +7,28 @@
 
 import RIBs
 
-protocol RootDependency: MoviesDependency, ActorsDependency {}
+protocol RootDependency: MoviesDependency, ActorsDependency {
+    var viewController: RootViewController { get }
+}
 
 final class RootComponent: Component<EmptyDependency>, RootDependency {
-    var moviesViewController: MoviesViewControllable
-    var actorsViewController: ActorsViewControllable
+    var viewController: RootViewController = RootViewController()
     
-    var dataManager: DataManager {
-        shared { DataManager() }
+    var moviesViewController: MoviesViewControllable {
+        viewController
     }
     
-    init(dependency: EmptyDependency, moviesViewController: MoviesViewControllable, actorsViewController: ActorsViewControllable) {
-        self.moviesViewController = moviesViewController
-        self.actorsViewController = actorsViewController
-        super.init(dependency: dependency)
+    var actorsViewController: ActorsViewControllable {
+        viewController
     }
+    
+    var dataManager: DataManager = DataManager()
 }
 
 // MARK: - Builder
 
 protocol RootBuildable: Buildable {
-    func build(_ viewControllable: RootViewController) -> LaunchRouting
+    func build() -> LaunchRouting
 }
 
 final class RootBuilder: Builder<RootDependency>, RootBuildable {
@@ -35,8 +36,8 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
         super.init(dependency: dependency)
     }
 
-    func build(_ viewControllable: RootViewController) -> LaunchRouting {
-        let interactor = RootInteractor(presenter: viewControllable)
+    func build() -> LaunchRouting {
+        let interactor = RootInteractor(presenter: dependency.viewController)
         
         let moviesBuildable = MoviesBuilder(dependency: dependency)
         let actorsBuildable = ActorsBuilder(dependency: dependency)
@@ -45,7 +46,7 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
             moviesBuildable: moviesBuildable,
             actorsBuildable: actorsBuildable,
             interactor: interactor,
-            viewController: viewControllable
+            viewController: dependency.viewController
         )
     }
 }

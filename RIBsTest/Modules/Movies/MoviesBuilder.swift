@@ -25,7 +25,6 @@ protocol MoviesBuildable: Buildable {
 }
 
 final class MoviesBuilder: Builder<MoviesDependency>, MoviesBuildable {
-
     override init(dependency: MoviesDependency) {
         super.init(dependency: dependency)
     }

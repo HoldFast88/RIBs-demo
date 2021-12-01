@@ -25,7 +25,6 @@ protocol ActorsBuildable: Buildable {
 }
 
 final class ActorsBuilder: Builder<ActorsDependency>, ActorsBuildable {
-
     override init(dependency: ActorsDependency) {
         super.init(dependency: dependency)
     }

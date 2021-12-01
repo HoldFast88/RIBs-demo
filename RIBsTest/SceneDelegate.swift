@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let viewController = RootViewController()
-        let launchRouter = RootBuilder(dependency: AppComponent(dependency: EmptyComponent(), moviesViewController: viewController, actorsViewController: viewController)).build(viewController)
+        let launchRouter = RootBuilder(dependency: RootComponent(dependency: EmptyComponent(), moviesViewController: viewController, actorsViewController: viewController)).build(viewController)
         self.launchRouter = launchRouter
         launchRouter.launchFromWindow(window)
         self.window = window

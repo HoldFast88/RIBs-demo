@@ -17,7 +17,6 @@
 		E7B5A5462729B39D006A4ADA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5A5422729B39D006A4ADA /* RootViewController.swift */; };
 		E7B5A5472729B39D006A4ADA /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5A5432729B39D006A4ADA /* RootBuilder.swift */; };
 		E7B5A5482729B39D006A4ADA /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5A5442729B39D006A4ADA /* RootInteractor.swift */; };
-		E7B5A54A2729B5C3006A4ADA /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5A5492729B5C3006A4ADA /* AppComponent.swift */; };
 		E7B5A54E272B0399006A4ADA /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = E7B5A54D272B0399006A4ADA /* Movies.json */; };
 		E7B5A550272B03B0006A4ADA /* Actors.json in Resources */ = {isa = PBXBuildFile; fileRef = E7B5A54F272B03B0006A4ADA /* Actors.json */; };
 		E7B5A555272B0678006A4ADA /* MoviesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5A552272B0678006A4ADA /* MoviesRouter.swift */; };
@@ -63,7 +62,6 @@
 		E7B5A5422729B39D006A4ADA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E7B5A5432729B39D006A4ADA /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		E7B5A5442729B39D006A4ADA /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
-		E7B5A5492729B5C3006A4ADA /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		E7B5A54D272B0399006A4ADA /* Movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
 		E7B5A54F272B03B0006A4ADA /* Actors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actors.json; sourceTree = "<group>"; };
 		E7B5A552272B0678006A4ADA /* MoviesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouter.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				E7B5A54B272B0361006A4ADA /* Data */,
 				E7B5A51A27281F09006A4ADA /* AppDelegate.swift */,
 				E7B5A51C27281F09006A4ADA /* SceneDelegate.swift */,
-				E7B5A5492729B5C3006A4ADA /* AppComponent.swift */,
 				E7B5A52027281F09006A4ADA /* Main.storyboard */,
 				E7B5A52327281F0B006A4ADA /* Assets.xcassets */,
 				E7B5A52527281F0B006A4ADA /* LaunchScreen.storyboard */,
@@ -413,7 +410,6 @@
 				E7B5C83B2748F9DE006485AB /* MovieDetailsViewController.swift in Sources */,
 				E7B5A55E272B0695006A4ADA /* ActorsInteractor.swift in Sources */,
 				E7B5A556272B0678006A4ADA /* MoviesBuilder.swift in Sources */,
-				E7B5A54A2729B5C3006A4ADA /* AppComponent.swift in Sources */,
 				E7B5A555272B0678006A4ADA /* MoviesRouter.swift in Sources */,
 				E7B5A557272B0678006A4ADA /* MoviesInteractor.swift in Sources */,
 				E7B5C82927480695006485AB /* InitialsImageFactory.swift in Sources */,

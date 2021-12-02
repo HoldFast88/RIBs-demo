@@ -12,11 +12,7 @@ protocol MoviesDependency: ListDependency, DetailsNavigationDependency {
     var moviesViewController: MoviesViewControllable { get }
 }
 
-final class MoviesComponent: Component<MoviesDependency> {
-    fileprivate var moviesViewController: MoviesViewControllable {
-        return dependency.moviesViewController
-    }
-}
+final class MoviesComponent: Component<MoviesDependency> {}
 
 // MARK: - Builder
 
@@ -30,7 +26,6 @@ final class MoviesBuilder: Builder<MoviesDependency>, MoviesBuildable {
     }
 
     func build(withListener listener: MoviesListener) -> MoviesRouting {
-        let component = MoviesComponent(dependency: dependency)
         let interactor = MoviesInteractor(dataManager: dependency.dataManager)
         interactor.listener = listener
         
@@ -41,7 +36,7 @@ final class MoviesBuilder: Builder<MoviesDependency>, MoviesBuildable {
             interactor: interactor,
             listBuildable: listBuildable,
             detailsNavigationBuildable: detailsNavigationBuildable,
-            viewController: component.moviesViewController
+            viewController: dependency.moviesViewController
         )
     }
 }

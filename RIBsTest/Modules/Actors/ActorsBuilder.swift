@@ -12,11 +12,7 @@ protocol ActorsDependency: ListDependency, DetailsNavigationDependency {
     var actorsViewController: ActorsViewControllable { get }
 }
 
-final class ActorsComponent: Component<ActorsDependency> {
-    fileprivate var actorsViewController: ActorsViewControllable {
-        return dependency.actorsViewController
-    }
-}
+final class ActorsComponent: Component<ActorsDependency> {}
 
 // MARK: - Builder
 
@@ -30,7 +26,6 @@ final class ActorsBuilder: Builder<ActorsDependency>, ActorsBuildable {
     }
 
     func build(withListener listener: ActorsListener) -> ActorsRouting {
-        let component = ActorsComponent(dependency: dependency)
         let interactor = ActorsInteractor(dataManager: dependency.dataManager)
         interactor.listener = listener
         
@@ -41,7 +36,7 @@ final class ActorsBuilder: Builder<ActorsDependency>, ActorsBuildable {
             interactor: interactor,
             listBuildable: listBuildable,
             detailsNavigationBuildable: detailsNavigationBuildable,
-            viewController: component.actorsViewController
+            viewController: dependency.actorsViewController
         )
     }
 }
